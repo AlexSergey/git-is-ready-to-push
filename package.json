@@ -1,0 +1,46 @@
+{
+  "name": "git-is-ready-to-push",
+  "version": "1.0.0",
+  "description": "Simple script to check is GIT has untracked files or not ",
+  "scripts": {
+    "format": "npm run format:package && npm run format:prettier && npm run format:eslint",
+    "format:eslint": "eslint ./src/** --fix",
+    "format:package": "sort-package-json",
+    "format:prettier": "prettier --write \"src/**/*.ts\"",
+    "lint": "npm run lint:ts && npm run lint:code",
+    "lint:code": "eslint ./src/**",
+    "lint:ts": "tsc --noEmit",
+    "prepare": "husky install"
+  },
+  "bin": {
+    "git-is-ready-to-push": "./dist/bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexSergey/git-is-ready-to-push.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexSergey/git-is-ready-to-push/issues"
+  },
+  "homepage": "https://github.com/AlexSergey/git-is-ready-to-push#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "simple-git": "^3.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-unicorn": "^43.0.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.6.2",
+    "sort-package-json": "^1.57.0"
+  }
+}
