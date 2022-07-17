@@ -2,6 +2,20 @@
   "name": "git-is-ready-to-push",
   "version": "1.0.0",
   "description": "Simple script to check is GIT has untracked files or not ",
+  "keywords": [],
+  "homepage": "https://github.com/AlexSergey/git-is-ready-to-push#readme",
+  "bugs": {
+    "url": "https://github.com/AlexSergey/git-is-ready-to-push/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexSergey/git-is-ready-to-push.git"
+  },
+  "license": "MIT",
+  "author": "Aleksandrov Sergey <gooddev.sergey@gmail.com> (https://github.com/AlexSergey/rockpack)",
+  "bin": {
+    "git-is-ready-to-push": "./dist/bin/index.js"
+  },
   "scripts": {
     "format": "npm run format:package && npm run format:prettier && npm run format:eslint",
     "format:eslint": "eslint ./src/** --fix",
@@ -12,20 +26,6 @@
     "lint:ts": "tsc --noEmit",
     "prepare": "husky install"
   },
-  "bin": {
-    "git-is-ready-to-push": "./dist/bin/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlexSergey/git-is-ready-to-push.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AlexSergey/git-is-ready-to-push/issues"
-  },
-  "homepage": "https://github.com/AlexSergey/git-is-ready-to-push#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "simple-git": "^3.10.0"
